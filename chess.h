@@ -18,6 +18,7 @@ public:
 	void setFirstCoordinate(int num);
 	void setSecondCoordinate(int num);
 	void setColor(int color);
+	void move(int firstCor, int secondCor);
 
 	template < typename T>
 	void eat(T object) {

@@ -27,6 +27,7 @@
 			this->_color = color;
 	}
 	int Chessman::getColor() { return this->_color; }
+	void Chessman::move(int firstCor, int secondCor) {}
 	
 	
 	std::string Pawn::nameToString() {
