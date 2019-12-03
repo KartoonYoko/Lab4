@@ -34,6 +34,12 @@
 		else
 			return false;
 	}
+	bool Chessman::isOutOfDesk() {
+		if (((this->getFirstCoordinate() < 1) || (this->getFirstCoordinate() > 8)) && ((this->getSecondCoordinate() < 1) || (this->getSecondCoordinate() > 8)))
+			return true;
+		else
+			return false;
+	}
 	
 	std::string Pawn::nameToString() {
 		return "I'm pawn.";
