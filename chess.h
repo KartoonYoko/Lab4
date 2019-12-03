@@ -8,9 +8,9 @@ enum ChessExсeption { InvalidCoordinate, InvalidValue };
 class Chessman
 {
 protected:
-	int _x; // первая координата
-	int _y; // вторая координата
-	int _color; // цвет шахмат
+	short _x; // первая координата
+	short _y; // вторая координата
+	short _color; // цвет шахмат
 public:
 	int getFirstCoordinate();
 	int getSecondCoordinate();
@@ -19,6 +19,8 @@ public:
 	void setSecondCoordinate(int num);
 	void setColor(int color);
 	void move(int firstCor, int secondCor);
+
+	bool isOutOfDesk(int firstCor, int secondCor); // вернет true если координаты выходят за пределы доски, иначе - false
 
 	template < typename T>
 	void eat(T object) {

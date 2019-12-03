@@ -28,13 +28,18 @@
 	}
 	int Chessman::getColor() { return this->_color; }
 	void Chessman::move(int firstCor, int secondCor) {}
-	
+	bool Chessman::isOutOfDesk(int firstCor, int secondCor) {
+		if (((firstCor < 1) || (firstCor > 8)) && ((secondCor < 1) || (secondCor > 8)))
+			return true;
+		else
+			return false;
+	}
 	
 	std::string Pawn::nameToString() {
 		return "I'm pawn.";
 	}
 	void Pawn::move(int firstCor, int secondCor) {
-		if ( ((firstCor < 1) || (firstCor > 8)) & ((secondCor < 1) || (secondCor > 8)) ) throw InvalidCoordinate;
+		if (this->isOutOfDesk(firstCor, secondCor)) throw InvalidCoordinate;
 		else {
 			if ((this->getSecondCoordinate() == secondCor) & (firstCor - 1 == this->getFirstCoordinate())) {
 				this->setFirstCoordinate(firstCor);
@@ -47,7 +52,7 @@
 		return "I'm Queen!";
 	}
 	void Queen::move(int firstCor, int secondCor) {
-		if (((firstCor < 1) || (firstCor > 8))& ((secondCor < 1) || (secondCor > 8))) throw InvalidCoordinate;
+		if (this->isOutOfDesk(firstCor, secondCor)) throw InvalidCoordinate;
 		else {
 			if ((firstCor == this->getFirstCoordinate()) || (secondCor == this->getSecondCoordinate())) {
 				this->setFirstCoordinate(firstCor);
@@ -67,7 +72,7 @@
 		return "I'm Bishop!";
 	}
 	void Bishop::move(int firstCor, int secondCor) {
-		if (((firstCor < 1) || (firstCor > 8))& ((secondCor < 1) || (secondCor > 8))) throw InvalidCoordinate;
+		if (this->isOutOfDesk(firstCor, secondCor)) throw InvalidCoordinate;
 		else {
 			if ( abs(firstCor - this->getFirstCoordinate()) == abs(secondCor - this->getSecondCoordinate()) )
 			{
