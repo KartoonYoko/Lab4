@@ -4,6 +4,7 @@
 
 
 
+
 	int Chessman::getSecondCoordinate() {
 		return this->_y;
 	}
@@ -28,8 +29,8 @@
 	int Chessman::getColor() { return this->_color; }
 	
 	
-	void Pawn::speak() {
-		std::cout << "I'm pawn." << std::endl;
+	std::string Pawn::nameToString() {
+		return "I'm pawn.";
 	}
 	void Pawn::move(int firstCor, int secondCor) {
 		if ( ((firstCor < 1) || (firstCor > 8)) & ((secondCor < 1) || (secondCor > 8)) ) throw InvalidCoordinate;
@@ -41,8 +42,8 @@
 	}
 
 
-	void Queen::speak() {
-		std::cout << "I'm Queen!" << std::endl;
+	std::string Queen::nameToString() {
+		return "I'm Queen!";
 	}
 	void Queen::move(int firstCor, int secondCor) {
 		if (((firstCor < 1) || (firstCor > 8))& ((secondCor < 1) || (secondCor > 8))) throw InvalidCoordinate;
@@ -61,8 +62,8 @@
 	}
 
 
-	void Bishop::speak() {
-		std::cout << "I'm Bishop!" << std::endl;
+	std::string Bishop::nameToString() {
+		return "I'm Bishop!";
 	}
 	void Bishop::move(int firstCor, int secondCor) {
 		if (((firstCor < 1) || (firstCor > 8))& ((secondCor < 1) || (secondCor > 8))) throw InvalidCoordinate;

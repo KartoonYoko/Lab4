@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 
 
 enum ChessExñeption { InvalidCoordinate, InvalidValue };
@@ -28,19 +28,19 @@ public:
 
 class Pawn : public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
 
 class Queen : public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
 
 
 class Bishop :public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
