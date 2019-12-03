@@ -12,9 +12,9 @@ protected:
 	short _y; // вторая координата
 	short _color; // цвет шахмат
 public:
-	int getFirstCoordinate();
-	int getSecondCoordinate();
-	int getColor();
+	short getFirstCoordinate();
+	short getSecondCoordinate();
+	short getColor();
 	void setFirstCoordinate(int num);
 	void setSecondCoordinate(int num);
 	void setColor(int color);
