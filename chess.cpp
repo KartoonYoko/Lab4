@@ -35,18 +35,18 @@
 			return false;
 	}
 	bool Chessman::isOutOfDesk() {
-		if (((this->getFirstCoordinate() < 1) || (this->getFirstCoordinate() > 8)) && ((this->getSecondCoordinate() < 1) || (this->getSecondCoordinate() > 8)))
-			return true;
-		else
-			return false;
+		return this->isOutOfDesk(this->getFirstCoordinate(), this->getSecondCoordinate());
 	}
+	
+	
+	
 	std::string Pawn::nameToString() {
 		return "I'm pawn.";
 	}
 	void Pawn::move(int firstCor, int secondCor) {
 		if (this->isOutOfDesk(firstCor, secondCor)) throw InvalidCoordinate;
 		else {
-			if ((this->getSecondCoordinate() == secondCor) & (firstCor - 1 == this->getFirstCoordinate())) {
+			if ((this->getSecondCoordinate() == secondCor) && (firstCor - 1 == this->getFirstCoordinate())) {
 				this->setFirstCoordinate(firstCor);
 			}
 		}
