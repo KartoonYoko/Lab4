@@ -11,6 +11,9 @@ using namespace std;
 
 int main()
 {
+	// goto:добавить класс шахматная доска
+	///asdadasdasd
+
 	Pawn peshka; // 1,1
 	Queen koroleva; // 1,1
 	Bishop slon; // 1,1

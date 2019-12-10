@@ -23,11 +23,6 @@ public:
 
 	bool isOutOfDesk(int firstCor, int secondCor); // вернет true если координаты выходят за пределы доски, иначе - false
 	bool isOutOfDesk(); // вернет true если координаты текущего класса выходят за пределы доски, иначе - false
-
-	template < typename T>
-	void eat(T object) {
-		~object();
-	}
 };
 
 
