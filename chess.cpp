@@ -5,8 +5,8 @@
 
 
 	Chessman::Chessman() {
-		this->_x = 0;
-		this->_y = 0;
+		this->_x = 1;
+		this->_y = 1;
 		this->_color = 0;
 	}
 	short Chessman::getSecondCoordinate() {
