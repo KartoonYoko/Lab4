@@ -4,7 +4,11 @@
 
 
 
-
+	Chessman::Chessman() {
+		this->_x = 0;
+		this->_y = 0;
+		this->_color = 0;
+	}
 	short Chessman::getSecondCoordinate() {
 		return this->_y;
 	}
@@ -27,9 +31,8 @@
 			this->_color = color;
 	}
 	short Chessman::getColor() { return this->_color; }
-	void Chessman::move(int firstCor, int secondCor) {}
 	bool Chessman::isOutOfDesk(int firstCor, int secondCor) {
-		if (((firstCor < 1) || (firstCor > 8)) && ((secondCor < 1) || (secondCor > 8)))
+		if (((firstCor < 1) || (firstCor > 8)) || ((secondCor < 1) || (secondCor > 8)))
 			return true;
 		else
 			return false;
@@ -39,7 +42,7 @@
 	}
 	
 	
-	
+	Pawn::Pawn() {}
 	std::string Pawn::nameToString() {
 		return "I'm pawn.";
 	}
@@ -52,7 +55,7 @@
 		}
 	}
 
-
+	Queen::Queen() {}
 	std::string Queen::nameToString() {
 		return "I'm Queen!";
 	}
@@ -72,7 +75,7 @@
 		}
 	}
 
-
+	Bishop::Bishop() {}
 	std::string Bishop::nameToString() {
 		return "I'm Bishop!";
 	}
