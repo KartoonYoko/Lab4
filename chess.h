@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 
 
 enum ChessExсeption { InvalidCoordinate, InvalidValue };
@@ -8,16 +8,20 @@ enum ChessExсeption { InvalidCoordinate, InvalidValue };
 class Chessman
 {
 protected:
-	int _x; // первая координата
-	int _y; // вторая координата
-	int _color; // цвет шахмат
+	short _x; // первая координата
+	short _y; // вторая координата
+	short _color; // цвет шахмат
 public:
-	int getFirstCoordinate();
-	int getSecondCoordinate();
-	int getColor();
+	short getFirstCoordinate();
+	short getSecondCoordinate();
+	short getColor();
 	void setFirstCoordinate(int num);
 	void setSecondCoordinate(int num);
 	void setColor(int color);
+	void move(int firstCor, int secondCor);
+
+	bool isOutOfDesk(int firstCor, int secondCor); // вернет true если координаты выходят за пределы доски, иначе - false
+	bool isOutOfDesk(); // вернет true если координаты текущего класса выходят за пределы доски, иначе - false
 
 	template < typename T>
 	void eat(T object) {
@@ -28,19 +32,19 @@ public:
 
 class Pawn : public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
 
 class Queen : public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
 
 
 class Bishop :public Chessman {
 public:
-	void speak();
+	std::string nameToString();
 	void move(int firstCor, int secondCor);
 };
