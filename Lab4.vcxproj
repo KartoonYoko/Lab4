@@ -151,23 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bishop.cpp" />
-    <ClCompile Include="chess.cpp" />
-    <ClCompile Include="ChessBoard.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Classes\Bishop\Bishop.cpp" />
+    <ClCompile Include="Classes\ChessBoard\ChessBoard.cpp" />
+    <ClCompile Include="Classes\Chessman\chess.cpp" />
+    <ClCompile Include="Classes\Game\Game.cpp" />
+    <ClCompile Include="Classes\Pawn\Pawn.cpp" />
+    <ClCompile Include="Classes\Queen\Queen.cpp" />
+    <ClCompile Include="Classes\User\User.cpp" />
     <ClCompile Include="Lab4.cpp" />
-    <ClCompile Include="Pawn.cpp" />
-    <ClCompile Include="Queen.cpp" />
-    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bishop.h" />
-    <ClInclude Include="chess.h" />
-    <ClInclude Include="ChessBoard.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Pawn.h" />
-    <ClInclude Include="Queen.h" />
-    <ClInclude Include="User.h" />
+    <ClInclude Include="Classes\Bishop\Bishop.h" />
+    <ClInclude Include="Classes\ChessBoard\ChessBoard.h" />
+    <ClInclude Include="Classes\Chessman\chess.h" />
+    <ClInclude Include="Classes\Game\Game.h" />
+    <ClInclude Include="Classes\Pawn\Pawn.h" />
+    <ClInclude Include="Classes\Queen\Queen.h" />
+    <ClInclude Include="Classes\User\User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

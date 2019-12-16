@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include <C:\Users\E400\Desktop\sadf\Lab4\chess.h>
+
 
 
 
