@@ -1,16 +1,18 @@
 #include "Pawn.h"
 
 
-Pawn::Pawn() {}
+Pawn::Pawn(){}
 std::string Pawn::nameToString() {
-	return "I'm pawn.";
+	return "Pawn";
 }
-void Pawn::move(int firstCor, int secondCor) {
+bool Pawn::move(int firstCor, int secondCor) {
 	if (this->isOutOfDesk(firstCor, secondCor)) throw InvalidCoordinate;
 	else {
 		if ((this->getSecondCoordinate() == secondCor) && (firstCor - 1 == this->getFirstCoordinate())) {
 			this->setFirstCoordinate(firstCor);
+			return true;
 		}
 	}
+	return false;
 }
 

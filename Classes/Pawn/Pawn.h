@@ -5,5 +5,5 @@ class Pawn : public Chessman {
 public:
 	Pawn();
 	std::string nameToString();
-	void move(int firstCor, int secondCor);
+	bool move(int firstCor, int secondCor);
 };
