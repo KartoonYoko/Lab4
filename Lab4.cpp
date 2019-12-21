@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include "Classes/ChessBoard/ChessBoard.h"
+#include "Classes/User/User.h"
 
 
 #include <vector>
@@ -17,6 +18,17 @@ int main()
 	Queen koroleva; // 1,1
 	Bishop slon; // 1,1
 	ChessBoard desk;
+	User user1;
+	Game game;
+
+	game.setDesk(&desk);
+	game.setUser(&user1);
+	game.setID(123456);
+
+	user1.setLastGame(&game);
+	user1.setNick("User1");
+	user1.setID(123);
+	user1.setPassword("123");
 
 	cout << desk._pawn[2]->nameToString() << endl;
 	cout << desk._pawn[2]->getFirstCoordinate() << endl;
@@ -32,6 +44,9 @@ int main()
 	cout << desk._bishop[2]->getFirstCoordinate() << endl;
 	cout << desk._bishop[2]->getSecondCoordinate() << endl;
 
+
+
+	/*
 	peshka.setFirstCoordinate(3);
 	peshka.setSecondCoordinate(3);
 	cout << peshka.nameToString() << " First coordinate: " << peshka.getFirstCoordinate() << "; Second coordinate: " << peshka.getSecondCoordinate() << endl;
@@ -45,5 +60,6 @@ int main()
 		cout << endl << "Exception was catched with code: " << e << endl;
 	}
 	cout << koroleva.nameToString() << " First coordinate: " << koroleva.getFirstCoordinate() << "; Second coordinate: " << koroleva.getSecondCoordinate() << endl;
+	*/
 }
 
